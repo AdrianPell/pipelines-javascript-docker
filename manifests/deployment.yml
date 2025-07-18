@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: adrianpellpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adrianpellpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: adrianpellpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: adrianpellpipelinesjavascriptdocker 
+          image: adriancontainerregistry.azurecr.io/adrianpellpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
